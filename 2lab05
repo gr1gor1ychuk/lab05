@@ -1,0 +1,42 @@
+#include <stdio.h>
+#include <math.h>
+
+int main ()
+{
+    float a, b , c;
+
+    float i, o, p;
+
+    printf ("Input sides length a, b, c: \n");
+    scanf ("%f %f %f",&a,&b,&c);
+
+    i = a + 1;
+    o = b + 1;
+    p = c + 1;
+
+    if (i != 1 && o != 1 && p != 1)
+    {
+        printf ("\nYour triangle is: ");
+
+        if (a == b, b == c, c == a) 
+            printf ("Rivnostoronniy \n");
+        else if (a == b || b == c || c == a) 
+            printf ("Rivnobedrennyi \n");
+        else if (a != b && a != c && b!=c)
+            printf ("Riznostoronnyi \n");
+
+        printf ("Your triangle is: ");
+
+        if ((a*a == b*b + c*c) || (b*b == a*a + c*c) || (c*c == a*a + b*b))
+            printf ("Pryamokytniy \n ");
+        else if ((a*a + b*b < c*c) || (a*a + c*c < b*b))
+            printf ("Typokytnyi  \n");
+        else if ((a*a + b*b > c*c) || (a*a + c*c > b*b) || (c*c + b*b > a*a))
+            printf ("Hostrokytnyi \n");
+
+    } 
+    else if (i == 1 || o == 1 || p == 1)
+    printf ("\nSide length can't be 0");
+    
+    return 0;
+}
