@@ -5,13 +5,16 @@ int main() {
 
 int a;
 
-printf ("\n Input number from 100-999: ");
+printf ("\nInput number from 100-999: ");
 scanf ("%d", &a);
 
 printf ("Your number: %d \n",a);
 
 if (a < 100 || a > 999)
+{
 printf ("Number is out of diapason!\n");
+return 0;
+}
 
 switch (a / 100)
 {
@@ -70,4 +73,7 @@ else
         case 8: printf ("eight"); break;
         case 9: printf ("nine"); break;
     }
+}
+
+return 0;
 }
